@@ -1,2 +1,1 @@
-# Advent-of-Code
-Ska inte komma sist 
+alt+f4 = free diamonds?
