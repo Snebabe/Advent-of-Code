@@ -1,19 +1,17 @@
-file = open("day1input.txt", "r")
+with open("day1input.txt") as file:
+    input = file.read()
+    input = input.splitlines()
 
 calories = []
-amounts = []
+total = []
 
-value = file.readline()
 
-for index in range (2246):
-    if value == "\n":
-        value = file.readline()
-        amounts.append(sum(calories))
+for value in input:
+    if value == "":
+        total.append(sum(calories))
         calories = []
     else:
-        value.replace("\n", "")
         calories.append(int(value))
-        value = file.readline()
 
-amounts.sort()
-print(amounts[-1]+ amounts[-2]+ amounts[-3])
+total.sort()
+print(total[-1]+ total[-2]+ total[-3])
