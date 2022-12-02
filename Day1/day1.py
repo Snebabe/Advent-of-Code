@@ -5,13 +5,12 @@ with open("Day1\day1input.txt") as file:
 calories = []
 total = []
 
-
 for value in input:
-    if value == "":
+    if value != "":
+        calories.append(int(value))
+    else:
         total.append(sum(calories))
         calories = []
-    else:
-        calories.append(int(value))
-
+        
 total.sort()
 print(total[-1]+ total[-2]+ total[-3])
