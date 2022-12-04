@@ -1,3 +1,4 @@
+
 with open("Day3\Day3input") as f:
     data = f.read()
     data = data.splitlines()
@@ -24,6 +25,6 @@ for index, value in enumerate(data):
         identical = ''.join(set(g1).intersection(g2, g3))
         if identical.isupper(): letterValue = ord(identical) -38
         else: letterValue = ord(identical) -96
-        sum += letterValue
+        sum += identical
 
 print(sum)
